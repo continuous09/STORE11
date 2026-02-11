@@ -1,0 +1,9 @@
+# Black T-Shirt - robots.txt
+# https://www.blacktshirt.ma
+User-agent: *
+Allow: /
+Disallow: /order.html
+Disallow: /admin/
+Disallow: /hero-map.html
+
+Sitemap: https://www.blacktshirt.ma/sitemap.xml

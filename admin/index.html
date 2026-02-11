@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="admin-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>لوحة التحكم | متجر الملابس</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body>
+    <div id="admin-app">
+      <!-- Login Screen -->
+      <div id="login-screen" class="login-screen">
+        <div class="login-card">
+          <div class="login-header">
+            <span class="login-icon">🔐</span>
+            <h1 data-i18n="loginTitle">لوحة تحكم المتجر</h1>
+            <p data-i18n="loginSubtitle">تسجيل الدخول لإدارة متجرك</p>
+          </div>
+          <form id="login-form" class="login-form">
+            <div class="form-group">
+              <label for="admin-password" data-i18n="password">كلمة المرور</label>
+              <input type="password" id="admin-password" data-i18n-placeholder="passwordPlaceholder" placeholder="أدخل كلمة المرور" required autocomplete="current-password" />
+            </div>
+            <button type="submit" class="btn btn-primary btn-large btn-full" data-i18n="loginBtn">دخول</button>
+            <p class="login-hint" data-i18n="loginHint">الافتراضي: admin123</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <div id="dashboard" class="dashboard hidden">
+        <header class="admin-header">
+          <div class="admin-header-inner">
+            <h1 class="admin-title" data-i18n="appTitle">لوحة التحكم</h1>
+            <div class="admin-header-actions">
+              <button type="button" id="lang-toggle" class="btn btn-ghost btn-small" title="العربية / English">ع EN</button>
+              <a href="../index.html" target="_blank" class="btn btn-ghost btn-small" data-i18n="previewSite">معاينة الموقع</a>
+              <button type="button" id="logout-btn" class="btn btn-ghost btn-small" data-i18n="logout">تسجيل الخروج</button>
+            </div>
+          </div>
+        </header>
+
+        <aside class="sidebar">
+          <div class="sidebar-brand">
+            <span class="sidebar-logo">⚙️</span>
+            <span data-i18n="appTitle">لوحة التحكم</span>
+          </div>
+          <nav class="sidebar-nav">
+            <button type="button" class="nav-item active" data-section="dashboard">
+              <span class="nav-icon">📊</span>
+              <span data-i18n="navDashboard">الرئيسية</span>
+            </button>
+            <button type="button" class="nav-item" data-section="products">
+              <span class="nav-icon">📦</span>
+              <span data-i18n="navProducts">المنتجات</span>
+            </button>
+            <button type="button" class="nav-item" data-section="inventory">
+              <span class="nav-icon">📋</span>
+              <span data-i18n="navInventory">المخزون</span>
+            </button>
+            <button type="button" class="nav-item" data-section="sizes">
+              <span class="nav-icon">📐</span>
+              <span data-i18n="navSizes">المقاسات</span>
+            </button>
+            <button type="button" class="nav-item" data-section="orders">
+              <span class="nav-icon">🛒</span>
+              <span data-i18n="navOrders">الطلبات</span>
+            </button>
+            <button type="button" class="nav-item" data-section="customers">
+              <span class="nav-icon">👤</span>
+              <span data-i18n="navCustomers">العملاء</span>
+            </button>
+            <button type="button" class="nav-item" data-section="content">
+              <span class="nav-icon">📄</span>
+              <span data-i18n="navContent">المحتوى</span>
+            </button>
+            <button type="button" class="nav-item" data-section="floating-contact">
+              <span class="nav-icon">📱</span>
+              <span data-i18n="navFloatingContact">زر الاتصال العائم</span>
+            </button>
+            <button type="button" class="nav-item" data-section="design">
+              <span class="nav-icon">🎨</span>
+              <span data-i18n="navDesign">التصميم</span>
+            </button>
+            <button type="button" class="nav-item" data-section="sync">
+              <span class="nav-icon">☁️</span>
+              <span data-i18n="navSync">مزامنة GitHub</span>
+            </button>
+          </nav>
+          <div class="sidebar-footer">
+            <a href="../index.html" target="_blank" class="nav-item">
+              <span class="nav-icon">🌐</span>
+              <span data-i18n="previewSite">معاينة الموقع</span>
+            </a>
+          </div>
+        </aside>
+
+        <main class="main-content">
+          <!-- Dashboard Home -->
+          <section id="section-dashboard" class="panel active">
+            <div class="panel-header">
+              <h2 data-i18n="navDashboard">الرئيسية</h2>
+            </div>
+            <div id="stats-cards" class="stats-cards"></div>
+          </section>
+
+          <!-- Products Section -->
+          <section id="section-products" class="panel">
+            <div class="panel-header">
+              <h2>إدارة المنتجات</h2>
+              <button type="button" class="btn btn-primary btn-large" id="btn-add-product">+ إضافة منتج</button>
+            </div>
+            <div id="products-list" class="cards-grid"></div>
+          </section>
+
+          <!-- Inventory Section -->
+          <section id="section-inventory" class="panel">
+            <div class="panel-header">
+              <h2>المخزون والتنبيهات</h2>
+            </div>
+            <div id="inventory-alerts" class="alerts-box"></div>
+            <div id="inventory-table-wrap" class="table-wrap"></div>
+          </section>
+
+          <!-- Sizes Section -->
+          <section id="section-sizes" class="panel">
+            <div class="panel-header">
+              <h2 data-i18n="sizesTitle">إدارة المقاسات</h2>
+              <div class="panel-actions">
+                <input type="text" id="sizes-new-input" class="input-inline" placeholder="مثال: XXL" data-i18n-placeholder="sizesNewPlaceholder" maxlength="20" />
+                <button type="button" class="btn btn-primary" id="btn-add-size" data-i18n="sizesAdd">إضافة مقاس</button>
+              </div>
+            </div>
+            <div class="sizes-intro" data-i18n="sizesIntro">أضف أو عدّل المقاسات المتاحة ثم عيّنها للمنتجات أدناه.</div>
+            <div class="sizes-two-cols">
+              <div class="sizes-col">
+                <h3 data-i18n="sizesGlobalList">قائمة المقاسات</h3>
+                <ul id="sizes-list" class="sizes-list"></ul>
+              </div>
+              <div class="sizes-col">
+                <h3 data-i18n="sizesAssignProducts">تعيين المقاسات للمنتجات</h3>
+                <p class="sizes-hint" data-i18n="sizesAssignHint">اختر المقاسات المتاحة لكل منتج ثم اضغط حفظ.</p>
+                <div id="sizes-products-grid" class="sizes-products-grid"></div>
+                <button type="button" class="btn btn-primary btn-large" id="btn-save-product-sizes" data-i18n="sizesSaveAssign">حفظ تعيين المقاسات</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Orders Section -->
+          <section id="section-orders" class="panel">
+            <div class="panel-header">
+              <h2 data-i18n="navOrders">الطلبات</h2>
+              <div class="panel-actions">
+                <button type="button" class="btn btn-secondary" id="btn-export-orders" data-i18n="exportCsv">تصدير CSV</button>
+                <button type="button" class="btn btn-ghost" id="btn-bulk-delete-orders" data-i18n="bulkDelete">حذف المحدد</button>
+              </div>
+            </div>
+            <div class="orders-toolbar">
+              <input type="search" id="orders-search" class="input-search" placeholder="بحث برقم الطلب، الاسم، الهاتف..." data-i18n-placeholder="ordersSearchPlaceholder" />
+              <select id="orders-status-filter" class="select-filter">
+                <option value="" data-i18n="filterAll">كل الحالات</option>
+                <option value="pending" data-i18n="statusPending">قيد الانتظار</option>
+                <option value="processing" data-i18n="statusConfirmed">مؤكد</option>
+                <option value="shipped" data-i18n="statusShipped">تم الشحن</option>
+                <option value="delivered" data-i18n="statusDelivered">تم التوصيل</option>
+                <option value="cancelled" data-i18n="statusCancelled">ملغي</option>
+              </select>
+            </div>
+            <div id="orders-table-wrap" class="orders-table-wrap"></div>
+          </section>
+
+          <!-- Customers Section -->
+          <section id="section-customers" class="panel">
+            <div class="panel-header">
+              <h2 data-i18n="navCustomers">العملاء</h2>
+            </div>
+            <div id="customers-list" class="customers-list"></div>
+          </section>
+
+          <!-- Floating Contact Section -->
+          <section id="section-floating-contact" class="panel">
+            <div class="panel-header">
+              <h2 data-i18n="floatingContactTitle">زر الاتصال العائم</h2>
+              <button type="button" class="btn btn-primary btn-large" id="btn-save-floating-contact" data-i18n="save">حفظ</button>
+            </div>
+            <div id="floating-contact-fields" class="form-grid"></div>
+          </section>
+
+          <!-- Content Section -->
+          <section id="section-content" class="panel">
+            <div class="panel-header">
+              <h2>المحتوى والصفحات</h2>
+              <button type="button" class="btn btn-primary btn-large" id="btn-save-content">حفظ التغييرات</button>
+            </div>
+            <div class="tabs">
+              <button type="button" class="tab active" data-tab="content-home">الرئيسية</button>
+              <button type="button" class="tab" data-tab="content-about">من نحن</button>
+              <button type="button" class="tab" data-tab="content-contact">اتصل بنا</button>
+              <button type="button" class="tab" data-tab="content-banners">البانرات</button>
+            </div>
+            <div id="content-home" class="tab-panel active">
+              <div id="content-home-fields" class="form-grid"></div>
+            </div>
+            <div id="content-about" class="tab-panel">
+              <div id="content-about-fields" class="form-grid"></div>
+            </div>
+            <div id="content-contact" class="tab-panel">
+              <div id="content-contact-fields" class="form-grid"></div>
+            </div>
+            <div id="content-banners" class="tab-panel">
+              <div id="banners-list" class="banners-list"></div>
+              <button type="button" class="btn btn-secondary" id="btn-add-banner">+ إضافة بانر</button>
+            </div>
+          </section>
+
+          <!-- GitHub Sync Section -->
+          <section id="section-sync" class="panel">
+            <div class="panel-header">
+              <h2 data-i18n="syncTitle">مزامنة مع GitHub Pages</h2>
+              <button type="button" class="btn btn-primary btn-large" id="btn-sync-now" data-i18n="syncNow">مزامنة الآن</button>
+            </div>
+            <p class="form-hint sync-hint" data-i18n="syncHint">احفظ التغييرات على الخادم حتى تظهر على جميع الأجهزة.</p>
+            <div id="sync-fields" class="form-grid"></div>
+          </section>
+
+          <!-- Design Section -->
+          <section id="section-design" class="panel">
+            <div class="panel-header">
+              <h2>التصميم والألوان</h2>
+              <div class="panel-actions">
+                <a href="../products.html" target="_blank" rel="noopener" class="btn btn-secondary btn-large">معاينة المنتجات</a>
+                <button type="button" class="btn btn-primary btn-large" id="btn-save-design">حفظ التصميم</button>
+              </div>
+            </div>
+            <div id="design-fields" class="form-grid design-grid"></div>
+            <div class="design-product-card">
+              <h3>بطاقة المنتج (الألوان والخط والشبكة)</h3>
+              <div id="design-product-card-fields" class="form-grid design-grid"></div>
+            </div>
+            <div class="design-categories-order">
+              <h3>فئات المنتجات وترتيب العرض</h3>
+              <div class="design-two-cols">
+                <div>
+                  <label>قائمة الفئات (للعرض والفلترة)</label>
+                  <div id="design-categories-list"></div>
+                  <input type="text" id="design-category-new" class="input-inline" placeholder="فئة جديدة" maxlength="40" />
+                  <button type="button" class="btn btn-secondary btn-small" id="btn-add-category">إضافة فئة</button>
+                </div>
+                <div>
+                  <label>ترتيب المنتجات في الصفحة (اسحب للتعديل)</label>
+                  <p class="form-hint">المنتجات المذكورة هنا تظهر أولاً؛ الباقي يتبعها.</p>
+                  <ul id="design-product-order" class="product-order-list"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="section-toggles">
+              <h3>إظهار/إخفاء أقسام الموقع</h3>
+              <div id="section-toggles-list"></div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <!-- Product Edit Modal -->
+      <div id="product-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content modal-large">
+          <div class="modal-header">
+            <h2 id="product-modal-title">إضافة منتج</h2>
+            <button type="button" class="modal-close" aria-label="إغلاق">×</button>
+          </div>
+          <form id="product-form" class="modal-body">
+            <input type="hidden" id="product-id" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="product-name">اسم المنتج</label>
+                <input type="text" id="product-name" required placeholder="مثال: تيشيرت أسود كلاسيك" />
+              </div>
+              <div class="form-group">
+                <label>الفئة</label>
+                <select id="product-category">
+                  <option value="">—</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row form-row-prices">
+              <div class="form-group">
+                <label for="product-regular-price">السعر القديم (درهم)</label>
+                <input type="number" id="product-regular-price" min="0" step="1" placeholder="السعر قبل التخفيض" />
+              </div>
+              <div class="form-group">
+                <label for="product-discount-price">السعر الجديد (درهم)</label>
+                <input type="number" id="product-discount-price" min="0" step="1" placeholder="السعر بعد التخفيض (اختياري)" />
+              </div>
+              <div class="form-group">
+                <label for="product-discount-percent">نسبة التخفيض % (1–100)</label>
+                <input type="number" id="product-discount-percent" min="1" max="100" step="1" placeholder="تحسب تلقائياً أو عدّل يدوياً" title="يُحدّث السعر الجديد عند التعديل" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="product-description">الوصف</label>
+              <textarea id="product-description" rows="4" placeholder="وصف المنتج"></textarea>
+            </div>
+            <div class="form-group">
+              <label>الصور (رابط أو رفع — ترتيب بالسحب)</label>
+              <div id="product-images" class="images-upload"></div>
+              <input type="file" id="product-image-input" accept="image/*" multiple class="hidden" />
+              <div class="image-buttons">
+                <button type="button" class="btn btn-secondary" id="btn-add-image-url">+ إضافة رابط صورة</button>
+                <button type="button" class="btn btn-secondary" id="btn-upload-image">+ رفع صورة من الجهاز</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>الألوان المتاحة</label>
+              <div id="product-colors" class="colors-list"></div>
+              <button type="button" class="btn btn-secondary btn-small" id="btn-add-color">+ لون</button>
+            </div>
+            <div class="form-group">
+              <label>المقاسات والكميات (لكل لون × مقاس)</label>
+              <div id="product-inventory" class="inventory-grid"></div>
+            </div>
+            <div class="form-group form-group-inline">
+              <label class="checkbox-label">
+                <input type="checkbox" id="product-visible" checked />
+                <span>إظهار المنتج في المتجر</span>
+              </label>
+            </div>
+            <div class="modal-actions">
+              <button type="button" class="btn btn-ghost modal-cancel">إلغاء</button>
+              <button type="submit" class="btn btn-primary btn-large">حفظ المنتج</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Order Detail Modal -->
+      <div id="order-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 data-i18n="orderDetails">تفاصيل الطلب</h2>
+            <button type="button" class="modal-close" aria-label="إغلاق">×</button>
+          </div>
+          <div id="order-detail-body" class="modal-body"></div>
+          <div class="modal-footer">
+            <select id="order-detail-status" class="order-status-select"></select>
+            <button type="button" class="btn btn-ghost" id="order-detail-delete" data-i18n="delete">حذف</button>
+            <button type="button" class="btn btn-primary" id="order-detail-save" data-i18n="save">حفظ</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Detail Modal -->
+      <div id="customer-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 data-i18n="customerDetails">تفاصيل العميل</h2>
+            <button type="button" class="modal-close" aria-label="إغلاق">×</button>
+          </div>
+          <div id="customer-detail-body" class="modal-body"></div>
+        </div>
+      </div>
+
+      <!-- Toast -->
+      <div id="toast" class="toast hidden"></div>
+    </div>
+
+    <script src="../assets/js/store.js"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

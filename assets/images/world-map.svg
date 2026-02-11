@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" class="hero-map__svg-inner" aria-hidden="true">
+  <defs>
+    <linearGradient id="hero-map-land" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+    <filter id="hero-map-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="hero-map-marker-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#fbbf24" flood-opacity="0.6"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Stylized continents (simplified outlines, equirectangular 1000x500) -->
+  <g class="hero-map__map-group" fill="url(#hero-map-land)" stroke="rgba(255,255,255,0.09)" stroke-width="0.4">
+    <!-- North America -->
+    <path d="M 180 120 L 220 95 L 280 100 L 320 85 L 380 110 L 400 150 L 390 200 L 360 240 L 320 260 L 280 250 L 240 220 L 200 180 L 185 150 Z"/>
+    <!-- South America -->
+    <path d="M 280 260 L 310 250 L 340 280 L 350 340 L 340 400 L 310 440 L 280 430 L 260 380 L 255 320 Z"/>
+    <!-- Europe -->
+    <path d="M 480 95 L 520 90 L 560 100 L 580 130 L 575 165 L 550 185 L 520 180 L 490 160 L 478 130 Z"/>
+    <!-- Africa (Morocco at top-left) -->
+    <path d="M 465 155 L 495 150 L 540 165 L 580 180 L 610 220 L 615 270 L 600 320 L 565 360 L 520 370 L 480 355 L 455 310 L 450 250 L 455 200 Z"/>
+    <!-- Asia -->
+    <path d="M 560 100 L 620 95 L 700 110 L 780 130 L 850 155 L 880 190 L 870 240 L 820 280 L 750 290 L 680 270 L 620 240 L 580 200 L 565 160 Z"/>
+    <!-- Australia -->
+    <path d="M 780 350 L 820 345 L 850 360 L 860 390 L 850 420 L 810 435 L 775 425 L 760 390 Z"/>
+  </g>
+  <!-- Ouarzazate marker: glowing point (positioned via CSS transform to 480, 164) -->
+  <g class="hero-map__marker" filter="url(#hero-map-marker-glow)">
+    <circle cx="0" cy="0" r="2.5" fill="rgba(251,191,36,0.95)"/>
+    <circle cx="0" cy="0" r="5" fill="none" stroke="rgba(251,191,36,0.5)" stroke-width="0.8"/>
+  </g>
+</svg>

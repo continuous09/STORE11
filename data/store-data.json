@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "id": "classic-fit",
+      "name": "Black Tee / Classic Fit",
+      "nameAr": "تيشيرت أسود / كلاسيك",
+      "regularPrice": 200,
+      "discountPrice": 116,
+      "description": "The original Black T-Shirt. Everyday fit with a clean neckline and soft-touch cotton.",
+      "descriptionAr": "التيشيرت الأسود الأصلي. قصة يومية ورقبة نظيفة وقماش ناعم.",
+      "images": ["https://images.pexels.com/photos/7671167/pexels-photo-7671167.jpeg?auto=compress&cs=tinysrgb&w=800"],
+      "colors": [{"name": "Deep Black", "hex": "#000000"}],
+      "sizes": ["S", "M", "L", "XL"],
+      "inventory": {"Deep Black|S": 10, "Deep Black|M": 15, "Deep Black|L": 12, "Deep Black|XL": 8},
+      "visible": true,
+      "meta": ["100% cotton"]
+    },
+    {
+      "id": "oversized",
+      "name": "Black Tee / Oversized",
+      "nameAr": "تيشيرت أسود / أوفرسايز",
+      "regularPrice": 200,
+      "discountPrice": null,
+      "description": "A relaxed, street-ready cut with dropped shoulders. Perfect for a bolder look.",
+      "descriptionAr": "قصة مريحة مع أكتاف منخفضة. مثالي للمظهر الجريء.",
+      "images": ["https://images.pexels.com/photos/7671168/pexels-photo-7671168.jpeg?auto=compress&cs=tinysrgb&w=800"],
+      "colors": [{"name": "Deep Black", "hex": "#000000"}],
+      "sizes": ["S", "M", "L", "XL"],
+      "inventory": {"Deep Black|S": 5, "Deep Black|M": 8, "Deep Black|L": 6, "Deep Black|XL": 4},
+      "visible": true,
+      "meta": ["Soft, mid-weight cotton · Unisex fit"]
+    },
+    {
+      "id": "slim-fit",
+      "name": "Black Tee / Slim",
+      "nameAr": "تيشيرت أسود / سليم",
+      "regularPrice": 200,
+      "discountPrice": null,
+      "description": "A sharper, slimmer silhouette that sits close to the body for a more tailored look.",
+      "descriptionAr": "قصة أنحف تلتصق بالجسم لمظهر أكثر أناقة.",
+      "images": ["https://images.pexels.com/photos/7671165/pexels-photo-7671165.jpeg?auto=compress&cs=tinysrgb&w=800"],
+      "colors": [{"name": "Deep Black", "hex": "#000000"}],
+      "sizes": ["S", "M", "L"],
+      "inventory": {"Deep Black|S": 7, "Deep Black|M": 9, "Deep Black|L": 5},
+      "visible": true,
+      "meta": ["Soft, breathable fabric · Curved hem"]
+    }
+  ],
+  "orders": [],
+  "content": {
+    "home": {
+      "heroEyebrow": "Ouarzazate . Morocco",
+      "heroTitle": "Pure Black. Pure Street.",
+      "heroSubtitle": "Black T-Shirt is a modern Moroccan streetwear brand built around one iconic piece: the perfect black tee. Minimal, premium and designed to live on the streets of Morocco.",
+      "heroCtaPrice": "200 MAD",
+      "heroMeta1": "Nationwide delivery across Morocco",
+      "heroMeta2": "100% cotton · Everyday essential",
+      "feature1Title": "Designed for the streets",
+      "feature1Text": "Inspired by the energy of Moroccan youth, our tees are made to move with you — from Ouarzazate to Casablanca.",
+      "feature2Title": "Premium build, minimal look",
+      "feature2Text": "Clean lines, no noise. Just a sharp black tee that upgrades any outfit, any day.",
+      "feature3Title": "Nationwide delivery",
+      "feature3Text": "Order from anywhere in Morocco. We ship straight to your door, fast and reliably.",
+      "stripPill": "Drop 001",
+      "stripTitle": "The only tee you need.",
+      "stripText": "One color. One cut. Endless outfits. Wear it with jeans, cargos, or layered under a jacket — Black T-Shirt just works.",
+      "stripPrice": "200 MAD",
+      "testimonial1": {"text": "\"The fit is perfect and the black doesn't fade after washing. It became my go-to T-shirt.\"", "name": "Yassine", "location": "Marrakech"},
+      "testimonial2": {"text": "\"Simple, clean and feels premium. I wear it to class and at night with friends.\"", "name": "Imane", "location": "Casablanca"},
+      "testimonial3": {"text": "\"Delivery to Rabat was fast and the packaging was on point. I ordered a second one immediately.\"", "name": "Omar", "location": "Rabat"}
+    },
+    "banners": [{"url": "https://images.pexels.com/photos/7671166/pexels-photo-7671166.jpeg?auto=compress&cs=tinysrgb&w=800", "alt": "Hero banner"}],
+    "about": {
+      "eyebrow": "About",
+      "title": "Built in Ouarzazate. Worn everywhere.",
+      "subtitle": "Black T-Shirt is a Moroccan streetwear brand focused on one essential piece: the perfect black tee.",
+      "storyTitle": "Our story",
+      "storyP1": "Black T-Shirt was born in Ouarzazate, Morocco — a city known for its film sets, light and energy. We wanted to create something just as iconic: a simple, powerful black T-shirt that fits perfectly into modern Moroccan life.",
+      "storyP2": "Instead of chasing every trend, we focus on one product and make it right. Clean lines, premium fabric and a fit that works on the streets, in class, at work or on a night out.",
+      "valuesTitle": "What we stand for",
+      "values": [
+        {"title": "Minimalism", "text": "One essential piece that works with everything you own."},
+        {"title": "Quality", "text": "Comfortable fabric, sharp color and a fit tested on real people."},
+        {"title": "Accessibility", "text": "Premium feel without the heavy price tag. Every tee is 200 MAD."},
+        {"title": "Moroccan street culture", "text": "Designed with the rhythm of our streets, campuses and cafés in mind."}
+      ],
+      "location": "Ouarzazate, Morocco",
+      "businessType": "Clothing brand focused on premium black T-shirts.",
+      "priceInfo": "Flat price of 200 MAD per item.",
+      "deliveryInfo": "Nationwide delivery across Morocco.",
+      "mapLat": 30.9198,
+      "mapLng": -6.8926,
+      "mapZoom": 14
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Let's make your next favorite tee.",
+      "subtitle": "Reach out to order, ask about sizing, or talk collaborations.",
+      "talkTitle": "Talk to us directly",
+      "talkText": "For the fastest response, send us a WhatsApp message with your name, size, city and how many T-shirts you want.",
+      "phone": "+212 679 460 301",
+      "email": "black12tshirt@gmail.com",
+      "location": "Ouarzazate, Morocco",
+      "businessType": "Clothing / T-shirts",
+      "priceInfo": "200 MAD per item · Nationwide delivery",
+      "whatsappMessage": "Hi Black T-Shirt, I want to order a T-shirt."
+    }
+  },
+  "design": {
+    "accentColor": "#f5c96a",
+    "logoText": "Black T-Shirt",
+    "defaultLang": "en",
+    "sections": {"hero": true, "features": true, "strip": true, "testimonials": true, "infoStrip": true},
+    "productCard": {
+      "discountBadgeBg": "#e53935",
+      "discountBadgeColor": "#ffffff",
+      "priceNewColor": "#f5c96a",
+      "priceOldColor": "#888888",
+      "cardBg": "rgba(10, 10, 10, 0.96)",
+      "cardBorder": "rgba(255, 255, 255, 0.06)",
+      "fontFamily": "Poppins, system-ui, sans-serif",
+      "gridColumnsDesktop": 4,
+      "gridColumnsMobile": 2
+    },
+    "productCategories": ["All", "T-Shirts", "Hoodies", "Accessories"],
+    "productOrder": []
+  },
+  "sizes": ["S", "M", "L", "XL"],
+  "floatingContact": {
+    "enabled": true,
+    "buttonType": "whatsapp",
+    "phoneNumber": "+212679460301",
+    "position": "right",
+    "defaultMessage": "Hi Black T-Shirt, I'd like to order a T-shirt."
+  }
+}
