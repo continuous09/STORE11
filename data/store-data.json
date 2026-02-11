@@ -8,12 +8,31 @@
       "discountPrice": 116,
       "description": "The original Black T-Shirt. Everyday fit with a clean neckline and soft-touch cotton.",
       "descriptionAr": "التيشيرت الأسود الأصلي. قصة يومية ورقبة نظيفة وقماش ناعم.",
-      "images": ["https://images.pexels.com/photos/7671167/pexels-photo-7671167.jpeg?auto=compress&cs=tinysrgb&w=800"],
-      "colors": [{"name": "Deep Black", "hex": "#000000"}],
-      "sizes": ["S", "M", "L", "XL"],
-      "inventory": {"Deep Black|S": 10, "Deep Black|M": 15, "Deep Black|L": 12, "Deep Black|XL": 8},
+      "images": [
+        "https://images.pexels.com/photos/7671167/pexels-photo-7671167.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "colors": [
+        {
+          "name": "Deep Black",
+          "hex": "#000000"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "inventory": {
+        "Deep Black|S": 10,
+        "Deep Black|M": 15,
+        "Deep Black|L": 12,
+        "Deep Black|XL": 8
+      },
       "visible": true,
-      "meta": ["100% cotton"]
+      "meta": [
+        "100% cotton"
+      ]
     },
     {
       "id": "oversized",
@@ -23,12 +42,31 @@
       "discountPrice": null,
       "description": "A relaxed, street-ready cut with dropped shoulders. Perfect for a bolder look.",
       "descriptionAr": "قصة مريحة مع أكتاف منخفضة. مثالي للمظهر الجريء.",
-      "images": ["https://images.pexels.com/photos/7671168/pexels-photo-7671168.jpeg?auto=compress&cs=tinysrgb&w=800"],
-      "colors": [{"name": "Deep Black", "hex": "#000000"}],
-      "sizes": ["S", "M", "L", "XL"],
-      "inventory": {"Deep Black|S": 5, "Deep Black|M": 8, "Deep Black|L": 6, "Deep Black|XL": 4},
+      "images": [
+        "https://images.pexels.com/photos/7671168/pexels-photo-7671168.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "colors": [
+        {
+          "name": "Deep Black",
+          "hex": "#000000"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "inventory": {
+        "Deep Black|S": 5,
+        "Deep Black|M": 8,
+        "Deep Black|L": 6,
+        "Deep Black|XL": 4
+      },
       "visible": true,
-      "meta": ["Soft, mid-weight cotton · Unisex fit"]
+      "meta": [
+        "Soft, mid-weight cotton · Unisex fit"
+      ]
     },
     {
       "id": "slim-fit",
@@ -38,15 +76,121 @@
       "discountPrice": null,
       "description": "A sharper, slimmer silhouette that sits close to the body for a more tailored look.",
       "descriptionAr": "قصة أنحف تلتصق بالجسم لمظهر أكثر أناقة.",
-      "images": ["https://images.pexels.com/photos/7671165/pexels-photo-7671165.jpeg?auto=compress&cs=tinysrgb&w=800"],
-      "colors": [{"name": "Deep Black", "hex": "#000000"}],
-      "sizes": ["S", "M", "L"],
-      "inventory": {"Deep Black|S": 7, "Deep Black|M": 9, "Deep Black|L": 5},
+      "images": [
+        "https://images.pexels.com/photos/7671165/pexels-photo-7671165.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "colors": [
+        {
+          "name": "Deep Black",
+          "hex": "#000000"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "inventory": {
+        "Deep Black|S": 7,
+        "Deep Black|M": 9,
+        "Deep Black|L": 5
+      },
       "visible": true,
-      "meta": ["Soft, breathable fabric · Curved hem"]
+      "meta": [
+        "Soft, breathable fabric · Curved hem"
+      ]
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "fullName": "yutycdkjt",
+      "phone": "21561454",
+      "city": "56544",
+      "notes": "jln",
+      "items": [
+        {
+          "id": "oversized-XL-Deep Black",
+          "productId": "oversized",
+          "name": "Black Tee / Oversized",
+          "size": "XL",
+          "color": "Deep Black",
+          "quantity": 2,
+          "price": 200,
+          "image": "https://images.pexels.com/photos/7671168/pexels-photo-7671168.jpeg?auto=compress&cs=tinysrgb&w=800"
+        }
+      ],
+      "total": 400,
+      "date": "2026-02-11T18:32:31.589Z",
+      "id": "ord-1770834752621",
+      "status": "pending"
+    },
+    {
+      "fullName": "oijnuon;o",
+      "phone": "+212679460301",
+      "city": ";obijk.bl",
+      "notes": "knklmo;",
+      "items": [
+        {
+          "id": "oversized-XL-Deep Black",
+          "productId": "oversized",
+          "name": "Black Tee / Oversized",
+          "size": "XL",
+          "color": "Deep Black",
+          "quantity": 1,
+          "price": 200,
+          "image": "https://images.pexels.com/photos/7671168/pexels-photo-7671168.jpeg?auto=compress&cs=tinysrgb&w=800"
+        }
+      ],
+      "total": 200,
+      "date": "2026-02-11T18:01:49.357Z",
+      "id": "ord-1770832912679",
+      "status": "pending"
+    },
+    {
+      "fullName": "11111",
+      "phone": "0679460301",
+      "city": "waurzazate",
+      "notes": "[pk|l'",
+      "items": [
+        {
+          "id": "oversized-L-Deep Black",
+          "productId": "oversized",
+          "name": "Black Tee / Oversized",
+          "size": "L",
+          "color": "Deep Black",
+          "quantity": 2,
+          "price": 200,
+          "image": "https://images.pexels.com/photos/7671168/pexels-photo-7671168.jpeg?auto=compress&cs=tinysrgb&w=800"
+        }
+      ],
+      "total": 400,
+      "date": "2026-02-11T17:51:10.386Z",
+      "id": "ord-1770832271534",
+      "status": "pending"
+    },
+    {
+      "fullName": ";uigyulvi",
+      "phone": "8648641856",
+      "city": "o;;hlib.",
+      "notes": "'ih0'i/0h",
+      "items": [
+        {
+          "id": "slim-fit-M-Deep Black",
+          "productId": "slim-fit",
+          "name": "Black Tee / Slim",
+          "size": "M",
+          "color": "Deep Black",
+          "quantity": 2,
+          "price": 200,
+          "image": "https://images.pexels.com/photos/7671165/pexels-photo-7671165.jpeg?auto=compress&cs=tinysrgb&w=800"
+        }
+      ],
+      "total": 400,
+      "date": "2026-02-11T17:45:05.455Z",
+      "id": "ord-1770831905590",
+      "status": "pending"
+    }
+  ],
   "content": {
     "home": {
       "heroEyebrow": "Ouarzazate . Morocco",
@@ -65,11 +209,28 @@
       "stripTitle": "The only tee you need.",
       "stripText": "One color. One cut. Endless outfits. Wear it with jeans, cargos, or layered under a jacket — Black T-Shirt just works.",
       "stripPrice": "200 MAD",
-      "testimonial1": {"text": "\"The fit is perfect and the black doesn't fade after washing. It became my go-to T-shirt.\"", "name": "Yassine", "location": "Marrakech"},
-      "testimonial2": {"text": "\"Simple, clean and feels premium. I wear it to class and at night with friends.\"", "name": "Imane", "location": "Casablanca"},
-      "testimonial3": {"text": "\"Delivery to Rabat was fast and the packaging was on point. I ordered a second one immediately.\"", "name": "Omar", "location": "Rabat"}
+      "testimonial1": {
+        "text": "\"The fit is perfect and the black doesn't fade after washing. It became my go-to T-shirt.\"",
+        "name": "Yassine",
+        "location": "Marrakech"
+      },
+      "testimonial2": {
+        "text": "\"Simple, clean and feels premium. I wear it to class and at night with friends.\"",
+        "name": "Imane",
+        "location": "Casablanca"
+      },
+      "testimonial3": {
+        "text": "\"Delivery to Rabat was fast and the packaging was on point. I ordered a second one immediately.\"",
+        "name": "Omar",
+        "location": "Rabat"
+      }
     },
-    "banners": [{"url": "https://images.pexels.com/photos/7671166/pexels-photo-7671166.jpeg?auto=compress&cs=tinysrgb&w=800", "alt": "Hero banner"}],
+    "banners": [
+      {
+        "url": "https://images.pexels.com/photos/7671166/pexels-photo-7671166.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "alt": "Hero banner"
+      }
+    ],
     "about": {
       "eyebrow": "About",
       "title": "Built in Ouarzazate. Worn everywhere.",
@@ -79,10 +240,22 @@
       "storyP2": "Instead of chasing every trend, we focus on one product and make it right. Clean lines, premium fabric and a fit that works on the streets, in class, at work or on a night out.",
       "valuesTitle": "What we stand for",
       "values": [
-        {"title": "Minimalism", "text": "One essential piece that works with everything you own."},
-        {"title": "Quality", "text": "Comfortable fabric, sharp color and a fit tested on real people."},
-        {"title": "Accessibility", "text": "Premium feel without the heavy price tag. Every tee is 200 MAD."},
-        {"title": "Moroccan street culture", "text": "Designed with the rhythm of our streets, campuses and cafés in mind."}
+        {
+          "title": "Minimalism",
+          "text": "One essential piece that works with everything you own."
+        },
+        {
+          "title": "Quality",
+          "text": "Comfortable fabric, sharp color and a fit tested on real people."
+        },
+        {
+          "title": "Accessibility",
+          "text": "Premium feel without the heavy price tag. Every tee is 200 MAD."
+        },
+        {
+          "title": "Moroccan street culture",
+          "text": "Designed with the rhythm of our streets, campuses and cafés in mind."
+        }
       ],
       "location": "Ouarzazate, Morocco",
       "businessType": "Clothing brand focused on premium black T-shirts.",
@@ -110,7 +283,13 @@
     "accentColor": "#f5c96a",
     "logoText": "Black T-Shirt",
     "defaultLang": "en",
-    "sections": {"hero": true, "features": true, "strip": true, "testimonials": true, "infoStrip": true},
+    "sections": {
+      "hero": true,
+      "features": true,
+      "strip": true,
+      "testimonials": true,
+      "infoStrip": true
+    },
     "productCard": {
       "discountBadgeBg": "#e53935",
       "discountBadgeColor": "#ffffff",
@@ -122,15 +301,26 @@
       "gridColumnsDesktop": 4,
       "gridColumnsMobile": 2
     },
-    "productCategories": ["All", "T-Shirts", "Hoodies", "Accessories"],
+    "productCategories": [
+      "All",
+      "T-Shirts",
+      "Hoodies",
+      "Accessories"
+    ],
     "productOrder": []
   },
-  "sizes": ["S", "M", "L", "XL"],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
   "floatingContact": {
     "enabled": true,
     "buttonType": "whatsapp",
     "phoneNumber": "+212679460301",
     "position": "right",
     "defaultMessage": "Hi Black T-Shirt, I'd like to order a T-shirt."
-  }
+  },
+  "ordersApiUrl": "https://continuous09.github.io/STORE11/api/orders"
 }
